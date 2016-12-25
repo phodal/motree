@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.motreeapp756328" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>MoTreeApp</name>
+<widget id="ren.growth.skilltree" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Growth：技能树</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Growth SKill Tree For Mobile
     </description>
-  <author email="you@example.com" href="http://example.com/">
-      Your Name Here
+  <author email="h@phodal.com" href="http://ren.growth">
+      Fengda Huang
     </author>
   <content src="index.html"/>
   <access origin="*"/>
