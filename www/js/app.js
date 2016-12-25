@@ -55,6 +55,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'SkillCtrl'
       }
     }
+  })
+  .state('app.about', {
+    url: '/about',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/about.html'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
