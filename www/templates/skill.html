@@ -1,6 +1,6 @@
 <ion-view view-title="{{skill.title}}">
   <ion-content>
-    <div class="card">
+    <div class="card" ng-if="skill.description">
       <div class="item item-divider">
         简介
       </div>
@@ -15,10 +15,9 @@
       </div>
       <ion-list ng-if="!isIOS()">
         <div ng-if="skill.rankDescriptions && skill.rankDescriptions.length > 0">
-          <ion-item ng-repeat="todo in skill.rankDescriptions">
-            <ion-label>{{todo}}</ion-label>
-            <ion-checkbox ng-click="addItemToDone(todo)"></ion-checkbox>
-          </ion-item>
+          <div ng-repeat="todo in skill.rankDescriptions">
+            <ion-checkbox ng-click="addItemToDone(todo)">{{todo}}</ion-checkbox>
+          </div>
         </div>
       </ion-list>
 

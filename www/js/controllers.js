@@ -6,7 +6,6 @@ angular.module('starter.controllers', [])
 
 .controller('HomeCtrl', function ($scope, $state) {
   $scope.openSkill = function (event) {
-    event.srcElement.style.fill = '#2d89ef';
     var id = event.srcElement.parentElement.getAttribute('id');
     $state.go('app.skill', {id: id});
   }
