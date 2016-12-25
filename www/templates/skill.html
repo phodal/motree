@@ -36,7 +36,7 @@
       <div class="item item-divider">
         扩展资料
       </div>
-      <ion-item ng-repeat="link in skill.links">
+      <ion-item ng-repeat="link in skill.links" ng-click="openLink(link.url)">
         {{link.label}}
       </ion-item>
     </div>
@@ -45,7 +45,7 @@
       <div class="item item-divider">
         推荐书籍
       </div>
-      <ion-item ng-repeat="book in skill.books">
+      <ion-item ng-repeat="book in skill.books" ng-click="openLink(book.url)">
         {{book.label}}
       </ion-item>
     </div>

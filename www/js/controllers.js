@@ -21,5 +21,12 @@ angular.module('starter.controllers', [])
 
   $scope.isIOS = function () {
     return ionic.Platform.isIOS();
+  };
+
+  $scope.openLink = function (link) {
+    if(link.url){
+      window.open(link, '_system', 'location=yes');
+      return false;
+    }
   }
 });
