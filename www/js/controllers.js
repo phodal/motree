@@ -8,7 +8,20 @@ angular.module('starter.controllers', [])
   $scope.openSkill = function (event) {
     var id = event.srcElement.parentElement.getAttribute('id');
     $state.go('app.skill', {id: id});
-  }
+  };
+
+  $scope.canAddPoints = function (id) {
+    return true;
+  };
+
+  $scope.hasPoints = function (id) {
+    return true;
+  };
+
+  $scope.hasMaxPoints = function (id) {
+    return true;
+  };
+
 })
 
 .controller('SkillCtrl', function ($scope, $state, $stateParams) {
@@ -18,10 +31,6 @@ angular.module('starter.controllers', [])
   $scope.addItemToDone = function () {
 
   };
-
-  $scope.canAddPoints = function () {
-    return true;
-  }
 
   $scope.isIOS = function () {
     return ionic.Platform.isIOS();
