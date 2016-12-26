@@ -19,6 +19,10 @@ angular.module('starter.controllers', [])
 
   };
 
+  $scope.canAddPoints = function () {
+    return true;
+  }
+
   $scope.isIOS = function () {
     return ionic.Platform.isIOS();
   };
