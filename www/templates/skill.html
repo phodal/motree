@@ -25,7 +25,7 @@
         <div ng-if="skill.rankDescriptions && skill.rankDescriptions.length > 0">
           <ion-item ng-repeat="todo in skill.rankDescriptions">
             {{todo}}
-            <ion-option-button class="button-positive" ng-click="addItemToDone(item)">Done
+            <ion-option-button class="button-positive" ng-click="addItemToDone(todo)">Done
             </ion-option-button>
           </ion-item>
         </div>
