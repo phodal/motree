@@ -149,6 +149,10 @@ window.SKILL_TREE = [
       }
     ],
     "description": "可以将设计转化为HTML与CSS",
+    "rankDescriptions": [
+      "可以将设计稿转化为HTML与CSS",
+      "可以不同风格布局的静态页面"
+    ],
     "stats": [
       {
         "title": "魅力",
@@ -238,6 +242,10 @@ window.SKILL_TREE = [
       }
     ],
     "description": "SEO是指从自然搜索结果获得网站流量的技术和过程。",
+    "rankDescriptions": [
+      "了解 Pagerank 和 SEO 的基本元素",
+      "可以将 SEO 的各种原则应用到代码中"
+    ],
     "stats": [
       {
         "title": "智力",
@@ -280,6 +288,9 @@ window.SKILL_TREE = [
       }
     ],
     "description": "仅仅做到被搜索引擎收录 并且在搜索结果中排名靠前还很不够，因为取得这样的效果实际上并不一定能增加用户的点击率，更不能保证将访问者转化为顾客或者潜在顾客，因此只能说是搜索引擎营销策略中两个最基本的目标。 SEM追求最高的性价比，以最小的投入，获最大的来自搜索引擎的访问量，并产生商业价值。",
+    "rankDescriptions": [
+      "能让来自搜索引擎的访问量产生价值"
+    ],
     "stats": [
       {
         "title": "智力",
@@ -350,8 +361,8 @@ window.SKILL_TREE = [
     ],
     "maxPoints": 2,
     "rankDescriptions": [
-      "熟练使用jQuery, MooTools, Prototype, Dojo, YUI等框架简单工作",
-      "熟练使用KnockoutJS, Ember.js, AngularJS, 及Backbone.js等框架完成复杂的前端功能"
+      "熟练使用jQuery, Bootstrap 等框架完成工作",
+      "熟练使用前端 MVC 框架完成复杂的前端单页面功能"
     ],
     "books": [
       {
@@ -412,6 +423,9 @@ window.SKILL_TREE = [
         "url": "http://www.amazon.cn/JavaScript%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1-%E5%8F%B8%E5%BE%92%E6%AD%A3%E7%BE%8E/dp/B00JD96R2Y/ref=sr_1_9?s=books&ie=UTF8&qid=1424747885&sr=1-9&keywords=%E6%A1%86%E6%9E%B6"
       }
     ],
+    "rankDescriptions": [
+      "理解单应用页面的基本原理，并能设计出相应的框架",
+    ],
     "stats": [
       {
         "title": "灵巧",
@@ -430,6 +444,9 @@ window.SKILL_TREE = [
         "label": "Server-side scripting Wiki",
         "url": "http://en.wikipedia.org/wiki/Server-side_scripting"
       }
+    ],
+    "rankDescriptions": [
+      "在web服务器上编写程序并使之正常运行"
     ],
     "description": "在web服务器上编写程序并使之正常运行",
     "stats": [
@@ -452,6 +469,9 @@ window.SKILL_TREE = [
       }
     ],
     "description": "Web应用框架有助于减轻网页开发时共通性活动的工作负荷，例如许多框架提供数据库访问接口、标准样板以及会话管理等，可提升代码的可再用性。",
+    "rankDescriptions": [
+      "能结合数据库及后端 MVC 完成简单的页面"
+    ],
     "stats": [
       {
         "title": "力量",
@@ -578,6 +598,9 @@ window.SKILL_TREE = [
       14
     ],
     "description": "你有能力设计和构建应用程序的后台,同时高效地存储和检索数据。",
+    "rankDescriptions": [
+      "能构建设计、构建高效地后台应用"
+    ],
     "stats": [
       {
         "title": "力量",
@@ -610,6 +633,9 @@ window.SKILL_TREE = [
       }
     ],
     "description": "认证的过程是确定某人或某事是否是谁或什么。授权是当用户被允许执行动作或具有对资源的访问确定的过程。",
+    "rankDescriptions": [
+      "了解 HTTP 的几种不同验证"
+    ],
     "stats": [
       {
         "title": "坚韧",
@@ -622,7 +648,7 @@ window.SKILL_TREE = [
   },
   {
     "id": 17,
-    "title": "AJAX & APIs",
+    "title": "API 设计",
     "depends": [
       10,
       15
@@ -656,6 +682,10 @@ window.SKILL_TREE = [
       }
     ],
     "description": "API是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。",
+    "rankDescriptions": [
+      "熟悉 Ajax 等异步数据更新",
+      "熟悉 RESTful API 设计"
+    ],
     "stats": [
       {
         "title": "力量",
@@ -787,6 +817,9 @@ window.SKILL_TREE = [
         "url": "http://www.amazon.cn/Adobe-Photoshop-CS6%E6%A0%87%E5%87%86%E5%9F%B9%E8%AE%AD%E6%95%99%E6%9D%90-ACAA%E4%B8%93%E5%AE%B6%E5%A7%94%E5%91%98%E4%BC%9A/dp/B00AD2D4QM/ref=sr_1_12?s=books&ie=UTF8&qid=1424747376&sr=1-12&keywords=photoshop"
       }
     ],
+    "rankDescriptions": [
+      "熟练使用 PS 等工具完成设计"
+    ],
     "description": "用如Photoshop之类的软件与手绘板一起创建布局、字体排印、视觉艺术、版面等以添加专业润色你的设计。",
     "stats": [
       {
@@ -830,6 +863,9 @@ window.SKILL_TREE = [
       }
     ],
     "description": "产品原型可以概括的说是整个产品面市之前的一个框架设计。以网站注册作为例子,整个前期的交互设计流程图之后,就是原形开发的设计阶段,简单的来说是将页面的模块、原素、人机交互的形式，利用线框描述的方法，将产品脱离皮肤状态下更加具体跟生动的进行表达.",
+    "rankDescriptions": [
+      "能快速地设计出产品原型"
+    ],
     "stats": [
       {
         "title": "智慧",
@@ -858,6 +894,9 @@ window.SKILL_TREE = [
       }
     ],
     "description": "能够依靠的项目要求变成一个有吸引力的设计，促进了愉快的用户体验。",
+    "rankDescriptions": [
+      "能区分不同设计下的用户体验区别"
+    ],
     "stats": [
       {
         "title": "智慧",
@@ -888,6 +927,9 @@ window.SKILL_TREE = [
       }
     ],
     "description": "它是一种技术，也被称为可用性测试，所使用的用户测试它来评估一个网站。",
+    "rankDescriptions": [
+      "能基于用户测试出网站的使用情况"
+    ],
     "stats": [
       {
         "title": "魅力",
@@ -965,8 +1007,8 @@ window.SKILL_TREE = [
     ],
     "maxPoints": 2,
     "rankDescriptions": [
-      "能最小化公共文件(js,css)和服务压缩(gzip)以节省带宽,同时提高网站速度",
-      "确保敏感流量通过HTTPS,并使用SSL证书"
+      "能最小化公共文件和服务压缩以节省带宽",
+      "确保敏感流量通过HTTPS，并使用SSL证书"
     ],
     "description": "在与世界分享你的应用程序，请在服务器上的安全性和性能的最佳实践。",
     "stats": [
@@ -1015,6 +1057,9 @@ window.SKILL_TREE = [
       }
     ],
     "description": "这里指的是设计，制造和维护一个网站。",
+    "rankDescriptions": [
+      "能独立设计出完成一个新的 Web 系统"
+    ],
     "stats": [
       {
         "title": "魅力",
