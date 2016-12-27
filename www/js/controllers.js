@@ -28,6 +28,14 @@ angular.module('starter.controllers', [])
   var id = $stateParams.id;
   $scope.$on('$ionicView.enter', function() {
     $scope.skill = _.filter(window.SKILL_TREE, {"id": parseInt(id)})[0];
+    localforage.getItem('skill', function (err, value) {
+      if(value){
+        $scope.skillInfo = value;
+      } else {
+        $scope.skillInfo = [];
+      }
+    });
+
     localforage.getItem('skill.' + $scope.skill.id, function (err, value) {
       if(value){
         $scope.skillStorageInfo = value;
@@ -39,6 +47,13 @@ angular.module('starter.controllers', [])
 
   $scope.addItemToDone = function () {
     localforage.setItem('skill.' + $scope.skill.id, $scope.skillStorageInfo);
+    if(Object.keys($scope.skillStorageInfo).length === $scope.skill.rankDescriptions.length) {
+      $scope.skillInfo[id] = true;
+      localforage.setItem('skill', $scope.skillInfo);
+    } else {
+      $scope.skillInfo[id] = false;
+      localforage.setItem('skill', $scope.skillInfo);
+    }
   };
 
   $scope.isIOS = function () {
