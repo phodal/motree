@@ -1,13 +1,20 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function ($rootScope) {
-  localforage.getItem('skill', function (err, value) {
-    $rootScope.loadDataFinish = true;
+.controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
+  $scope.$on('$ionicView.afterEnter', function() {
+    if (!window.cordova) {
+      console.log("--------");
+      $ionicModal.fromTemplateUrl('templates/svg-splash.html', {
+        scope: $scope,
+        animation: 'scale-in'
+      }).then(function (modal) {
+        $scope.modal = modal;
+        $scope.modal.show();
+      });
 
-    if (value) {
-      $rootScope.skillInfo = value;
-    } else {
-      $rootScope.skillInfo = [];
+      $timeout(function () {
+        $scope.modal.hide();
+      }, 2000);
     }
   });
 })
@@ -15,8 +22,6 @@ angular.module('starter.controllers', [])
 .controller('HomeCtrl', function ($scope, $state) {
   $scope.loadDataFinish = false;
   init();
-
-
 
   function init() {
     localforage.getItem('skill', function (err, value) {
