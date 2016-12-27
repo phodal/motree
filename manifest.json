@@ -1,12 +1,30 @@
 
 {
-  "name": "My Ionic App",
-  "short_name": "My Ionic App",
+  "name": "Growth 技能树",
+  "short_name": "Motree",
   "start_url": "index.html",
   "display": "standalone",
+  "background_color": "#3f51b5",
+  "theme_color": "#3f51b5",
   "icons": [{
-    "src": "icon.png",
-    "sizes": "512x512",
+    "src": "img/app-icon-32.png",
+    "type": "image/png",
+    "sizes": "32x32"
+  }, {
+    "src": "img/icon.svg",
+    "sizes": "128x128",
+    "type": "image/svg"
+  }, {
+    "src": "img/app-icon-144.png",
+    "sizes": "144x144",
     "type": "image/png"
+  }, {
+    "src": "img/icon.svg",
+    "sizes": "192x192",
+    "type": "image/svg"
+  },{
+    "src": "img/icon.svg",
+    "sizes": "384x384",
+    "type": "image/svg"
   }]
 }
