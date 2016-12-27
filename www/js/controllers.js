@@ -26,10 +26,19 @@ angular.module('starter.controllers', [])
 
 .controller('SkillCtrl', function ($scope, $state, $stateParams) {
   var id = $stateParams.id;
-  $scope.skill = _.filter(window.SKILL_TREE, {"id": parseInt(id)})[0];
+  $scope.$on('$ionicView.enter', function() {
+    $scope.skill = _.filter(window.SKILL_TREE, {"id": parseInt(id)})[0];
+    localforage.getItem('skill.' + $scope.skill.id, function (err, value) {
+      if(value){
+        $scope.skillStorageInfo = value;
+      } else {
+        $scope.skillStorageInfo = {};
+      }
+    });
+  });
 
   $scope.addItemToDone = function () {
-
+    localforage.setItem('skill.' + $scope.skill.id, $scope.skillStorageInfo);
   };
 
   $scope.isIOS = function () {

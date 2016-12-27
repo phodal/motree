@@ -16,7 +16,9 @@
       <ion-list ng-if="!isIOS()">
         <div ng-if="skill.rankDescriptions && skill.rankDescriptions.length > 0">
           <div ng-repeat="todo in skill.rankDescriptions">
-            <ion-checkbox ng-click="addItemToDone(todo)">{{todo}}</ion-checkbox>
+            <ion-checkbox ng-change="addItemToDone()"
+                          ng-model="skillStorageInfo['rank-' + $index]['checked']"
+                          ng-checked="skillStorageInfo['rank-' + $index]['checked']">{{todo}}</ion-checkbox>
           </div>
         </div>
       </ion-list>
