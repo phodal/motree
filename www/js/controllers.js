@@ -34,7 +34,7 @@ angular.module('starter.controllers', [])
 
   $scope.$on('$ionicView.beforeEnter', function() {
     init();
-  })
+  });
 
   $scope.openSkill = function (event) {
     var id = event.srcElement.parentElement.getAttribute('id');
@@ -86,7 +86,7 @@ angular.module('starter.controllers', [])
   };
 
   $scope.openLink = function (link) {
-    if(link.url){
+    if(link){
       window.open(link, '_system', 'location=yes');
       return false;
     }
