@@ -1,5 +1,7 @@
 # MoTree: A Mobile Skilltree
 
+Current Support: Android, iOS, Google PWA
+
 Inspired By & Data based on [https://github.com/352Media/skilltree](https://github.com/352Media/skilltree)
 
 SVG based on [Sherlock](https://github.com/phodal/sherlock)
