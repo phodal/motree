@@ -86,6 +86,10 @@ angular.module('starter.controllers', [])
   };
 
   $scope.openLink = function (link) {
+    if(window.cordova && window.cordova.InAppBrowser){
+      window.open = cordova.InAppBrowser.open;
+    }
+
     if(link.url){
       window.open(link.url, '_system', 'location=yes');
       return false;
