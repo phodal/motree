@@ -5,19 +5,43 @@ angular.module('starter.controllers', [])
 })
 
 .controller('HomeCtrl', function ($scope, $state) {
-  $scope.openSkill = function (event) {
+  var vm = this;
+  vm.loadDataFinish = false;
+  init();
+
+  function init() {
+    localforage.getItem('skill', function (err, value) {
+      vm.loadDataFinish = true;
+
+      if (value) {
+        vm.skillInfo = value;
+      } else {
+        vm.skillInfo = [];
+      }
+    });
+  }
+
+  vm.isLoadDataFinished = function () {
+    return vm.loadDataFinish;
+  };
+
+  vm.openSkill = function (event) {
     var id = event.srcElement.parentElement.getAttribute('id');
     $state.go('app.skill', {id: id});
   };
 
-  $scope.canAddPoints = function (id) {
-    return true;
+  vm.canAddPoints = function (skill_id) {
+    _.forEach(vm.skillInfo, function (value, id) {
+      if(skill_id === id) {
+        return value;
+      }
+    });
   };
 })
 
 .controller('SkillCtrl', function ($scope, $state, $stateParams) {
   var id = $stateParams.id;
-  $scope.$on('$ionicView.enter', function() {
+  $scope.$on('$ionicView.beforeEnter', function() {
     $scope.skill = _.filter(window.SKILL_TREE, {"id": parseInt(id)})[0];
     localforage.getItem('skill', function (err, value) {
       if(value){
