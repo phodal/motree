@@ -17,7 +17,7 @@ svg {
 
 g.node rect {
   stroke: #bdc3c7;
-  stroke-width: 2.5px;
+  stroke-width: 2px;
   cursor: pointer;
 }
 
@@ -47,7 +47,7 @@ rect.selection {
 .edgePath path {
   stroke: gray;
   fill: gray;
-  stroke-width: 1.5px;
+  stroke-width: 2px;
 }
 
 .node text {
@@ -69,5 +69,5 @@ svg *::-webkit-selection {
 
 g.can-add-points.node rect {
   fill: #2bb8c9 !important;
-  stroke: #4ca6e2;
+  stroke: #387ef5;
 }
