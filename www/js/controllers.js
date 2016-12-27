@@ -86,8 +86,8 @@ angular.module('starter.controllers', [])
   };
 
   $scope.openLink = function (link) {
-    if(link){
-      window.open(link, '_system', 'location=yes');
+    if(link.url){
+      window.open(link.url, '_system', 'location=yes');
       return false;
     }
   }
