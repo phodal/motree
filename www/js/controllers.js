@@ -1,23 +1,26 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function ($scope, $ionicModal, $timeout, $rootScope) {
   $scope.$on('$ionicView.afterEnter', function() {
-    if (!window.cordova) {
-      $ionicModal.fromTemplateUrl('templates/svg-splash.html', {
-        scope: $scope,
-        animation: 'scale-in'
-      }).then(function (modal) {
-        $scope.modal = modal;
-        $scope.modal.show();
-        var obt1 = new Vivus('obturateur1', {type: 'sync', duration: 150});
-        $scope.obt1 = function () {
-          return obt1;
-        };
-      });
+    if (!$rootScope.alreadyEnter) {
+      if (!window.cordova) {
+        $rootScope.alreadyEnter = true;
+        $ionicModal.fromTemplateUrl('templates/svg-splash.html', {
+          scope: $scope,
+          animation: 'scale-in'
+        }).then(function (modal) {
+          $scope.modal = modal;
+          $scope.modal.show();
+          var obt1 = new Vivus('obturateur1', {type: 'sync', duration: 150});
+          $scope.obt1 = function () {
+            return obt1;
+          };
+        });
 
-      $timeout(function () {
-        $scope.modal.hide();
-      }, 3000);
+        $timeout(function () {
+          $scope.modal.hide();
+        }, 3000);
+      }
     }
   });
 })
