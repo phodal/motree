@@ -5,6 +5,7 @@
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#3f51b5",
+  "orientation": "portrait",
   "theme_color": "#3f51b5",
   "icons": [{
     "src": "img/app-icon-32.png",
@@ -26,5 +27,11 @@
     "src": "img/icon.svg",
     "sizes": "384x384",
     "type": "image/svg"
-  }]
+  }],
+  "author": {
+    "name": "Fengda Huang",
+    "website": "https://www.phodal.com/",
+    "github": "https://github.com/phodal",
+    "source-repo": "https://github.com/phodal/motree"
+  }
 }
