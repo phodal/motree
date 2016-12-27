@@ -6,8 +6,8 @@ SVG based on [Sherlock](https://github.com/phodal/sherlock)
 
 截图
 
-![Screenshot 1](marketing/1.jpg)
-![Screenshot 2](marketing/2.jpg)
+![Screenshot 1](marketing/s1.jpeg)
+![Screenshot 2](marketing/s2.jpeg)
 
 Stack
 ---
