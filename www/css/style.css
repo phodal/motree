@@ -3,7 +3,7 @@ ion-scroll {
   height: 100%;
 }
 
-svg {
+svg#logo {
   width: 1200px;
   overflow: visible;
   margin: 0 auto;
@@ -72,7 +72,7 @@ g.can-add-points.node rect {
   stroke: #387ef5;
 }
 
-.splash img {
+.splash-img svg {
   /* Set rules to fill background */
   min-height: 100%;
 
@@ -84,5 +84,16 @@ g.can-add-points.node rect {
   position: fixed;
   top: 0;
   left: 0;
-  transform: scale(1.5);
+}
+
+.splash-img,
+#obturateur1 {
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  color: #3D489E;
+}
+
+svg#obturateur1 * {
+  fill: none;
+  stroke: currentColor;
 }
