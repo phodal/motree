@@ -13,15 +13,6 @@ angular.module('starter.controllers', [])
   $scope.canAddPoints = function (id) {
     return true;
   };
-
-  $scope.hasPoints = function (id) {
-    return true;
-  };
-
-  $scope.hasMaxPoints = function (id) {
-    return true;
-  };
-
 })
 
 .controller('SkillCtrl', function ($scope, $state, $stateParams) {
