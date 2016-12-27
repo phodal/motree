@@ -1,41 +1,51 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function ($rootScope) {
+  localforage.getItem('skill', function (err, value) {
+    $rootScope.loadDataFinish = true;
 
+    if (value) {
+      $rootScope.skillInfo = value;
+    } else {
+      $rootScope.skillInfo = [];
+    }
+  });
 })
 
 .controller('HomeCtrl', function ($scope, $state) {
-  var vm = this;
-  vm.loadDataFinish = false;
+  $scope.loadDataFinish = false;
   init();
+
+
 
   function init() {
     localforage.getItem('skill', function (err, value) {
-      vm.loadDataFinish = true;
+      $scope.loadDataFinish = true;
 
       if (value) {
-        vm.skillInfo = value;
+        $scope.loadDataFinish = true;
+        $scope.skillInfo = value;
       } else {
-        vm.skillInfo = [];
+        $scope.skillInfo = [];
       }
+      $scope.$apply();
     });
   }
 
-  vm.isLoadDataFinished = function () {
-    return vm.loadDataFinish;
-  };
+  $scope.$on('$ionicView.beforeEnter', function() {
+    init();
+  })
 
-  vm.openSkill = function (event) {
+  $scope.openSkill = function (event) {
     var id = event.srcElement.parentElement.getAttribute('id');
     $state.go('app.skill', {id: id});
   };
 
-  vm.canAddPoints = function (skill_id) {
-    _.forEach(vm.skillInfo, function (value, id) {
-      if(skill_id === id) {
-        return value;
-      }
-    });
+  $scope.canAddPoints = function (skill_id) {
+    if ($scope.skillInfo[skill_id] !== undefined) {
+      return $scope.skillInfo[skill_id];
+    }
+    return false;
   };
 })
 

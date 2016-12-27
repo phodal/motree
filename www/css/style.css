@@ -66,3 +66,8 @@ svg *::-moz-selection {
 svg *::-webkit-selection {
   background: transparent;
 }
+
+g.can-add-points.node rect {
+  fill: #2bb8c9 !important;
+  stroke: #4ca6e2;
+}
