@@ -4,9 +4,9 @@
   "short_name": "Motree",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#3f51b5",
+  "background_color": "#3D489E",
   "orientation": "portrait",
-  "theme_color": "#3f51b5",
+  "theme_color": "#387ef5",
   "icons": [{
     "src": "img/app-icon-32.png",
     "type": "image/png",
