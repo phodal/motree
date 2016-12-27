@@ -19,7 +19,7 @@ angular.module('starter.controllers', [])
 
         $timeout(function () {
           $scope.modal.hide();
-        }, 3000);
+        }, 4500);
       }
     }
   });
