@@ -93,7 +93,7 @@ g.can-add-points.node rect {
   color: #3D489E;
 }
 
-svg#obturateur1 * {
+svg#splash * {
   fill: none;
   stroke: currentColor;
 }

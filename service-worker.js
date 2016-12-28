@@ -28,13 +28,13 @@ self.addEventListener('install', function(e) {
 });
 
 self.addEventListener('activate', function (event) {
-
+  console.log('[ServiceWorker] Activate');
 });
 
 self.addEventListener('fetch', function (event) {
-
+  console.log('[ServiceWorker] Fetch');
 });
 
 self.addEventListener('push', function (event) {
-
+  console.log('[ServiceWorker] Push');
 });

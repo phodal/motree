@@ -11,9 +11,9 @@ angular.module('starter.controllers', [])
         }).then(function (modal) {
           $scope.modal = modal;
           $scope.modal.show();
-          var obt1 = new Vivus('obturateur1', {type: 'sync', duration: 150});
-          $scope.obt1 = function () {
-            return obt1;
+          var splashAnimate = new Vivus('splash', {type: 'sync', duration: 150});
+          $scope.splashAnimate = function () {
+            return splashAnimate;
           };
         });
 
