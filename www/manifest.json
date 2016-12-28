@@ -33,5 +33,11 @@
     "website": "https://www.phodal.com/",
     "github": "https://github.com/phodal",
     "source-repo": "https://github.com/phodal/motree"
-  }
+  },
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "ren.growth.skilltree"
+    }
+  ]
 }
