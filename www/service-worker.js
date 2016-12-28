@@ -31,10 +31,20 @@ self.addEventListener('install', function(e) {
 
 self.addEventListener('activate', function (event) {
   console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        console.log('[ServiceWorker] Removing old cache', key);
+        if (key !== cacheName) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });
 
 self.addEventListener('fetch', function (event) {
-  console.log(event.request.url);
+  console.log('[ServiceWorker] Fetch', event.request.url);
   event.respondWith(
     caches.match(event.request).then(function(response) {
       return response || fetch(event.request);
