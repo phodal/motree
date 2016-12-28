@@ -31,7 +31,12 @@ self.addEventListener('activate', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  console.log('[ServiceWorker] Fetch');
+  console.log(event.request.url);
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
 });
 
 self.addEventListener('push', function (event) {
