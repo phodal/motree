@@ -13,6 +13,9 @@ var filesToCache = [
   'js/data.js',
   'img/splash.svg',
   'img/icon.svg',
+  'img/favicon-96x96.png',
+  'img/favicon-32x32.png',
+  'img/favicon-16x16.png',
   'css/style.css'
 ];
 
