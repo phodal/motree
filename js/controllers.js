@@ -83,13 +83,20 @@ angular.module('starter.controllers', [])
 
   $scope.addItemToDone = function () {
     localforage.setItem('skill.' + $scope.skill.id, $scope.skillStorageInfo);
-    if(Object.keys($scope.skillStorageInfo).length === $scope.skill.rankDescriptions.length) {
-      $scope.skillInfo[id] = true;
-      localforage.setItem('skill', $scope.skillInfo);
-    } else {
-      $scope.skillInfo[id] = false;
-      localforage.setItem('skill', $scope.skillInfo);
-    }
+    var alreadyFinishItems = 0;
+    _.forEach($scope.skillStorageInfo, function(skill){
+      if(skill.checked) {
+        alreadyFinishItems++;
+      }
+
+      if(alreadyFinishItems === $scope.skill.rankDescriptions.length) {
+        $scope.skillInfo[id] = true;
+        localforage.setItem('skill', $scope.skillInfo);
+      } else {
+        $scope.skillInfo[id] = false;
+        localforage.setItem('skill', $scope.skillInfo);
+      }
+    });
   };
 
   $scope.isIOS = function () {
