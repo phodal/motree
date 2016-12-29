@@ -5,6 +5,7 @@
   "main": "service-worker.js",
   "dependencies": {},
   "devDependencies": {
+    "gulp-load-plugins": "^1.4.0",
     "sw-precache": "^4.2.3"
   },
   "scripts": {

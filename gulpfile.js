@@ -2,7 +2,6 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var express = require('express');
 var fs = require('fs');
 var packageJson = require('./package.json');
 var path = require('path');
@@ -14,7 +13,7 @@ function generateServiceWorkerFileContents(rootDir, handleFetch, callback) {
     handleFetch: handleFetch,
     logger: console.log,
     dynamicUrlToDependencies: {
-      './': [path.join(rootDir, 'views', 'index.ejs')],
+      './': [path.join(rootDir, 'views', 'index.ejs')]
     },
     staticFileGlobs: [
       rootDir + '/stylesheets/**.css',
@@ -27,12 +26,13 @@ function generateServiceWorkerFileContents(rootDir, handleFetch, callback) {
     stripPrefix: path.join(rootDir, path.sep)
   };
 
-  swPrecache(config, callback);
+  swPrecache.write(config, callback);
 }
 
 gulp.task('build', function(callback) {
   generateServiceWorkerFileContents('./app', true, function(error, serviceWorkerFileContents) {
     if (error) {
+      console.log(error);
       return callback(error);
     }
     fs.writeFile(path.join('service-worker.js'), serviceWorkerFileContents, callback);
