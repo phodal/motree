@@ -67,7 +67,7 @@ svg *::-webkit-selection {
   background: transparent;
 }
 
-g.can-add-points.node rect {
+g.has-point.node rect {
   fill: #2bb8c9 !important;
   stroke: #387ef5;
 }

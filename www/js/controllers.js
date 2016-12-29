@@ -52,7 +52,11 @@ angular.module('starter.controllers', [])
     $state.go('app.skill', {id: id});
   };
 
-  $scope.canAddPoints = function (skill_id) {
+  $scope.canAddPoint = function () {
+
+  };
+
+  $scope.hasPoint = function (skill_id) {
     if ($scope.skillInfo[skill_id] !== undefined) {
       return $scope.skillInfo[skill_id];
     }
