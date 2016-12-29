@@ -3,7 +3,7 @@
   "short_name": "Motree",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#3D489E",
+  "background_color": "#387ef5",
   "orientation": "portrait",
   "theme_color": "#387ef5",
   "icons": [{
