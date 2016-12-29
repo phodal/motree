@@ -9,6 +9,17 @@
       </div>
     </div>
 
+    <div class="card" ng-if="isDependenceDone()">
+      <div class="item item-divider">
+        依赖于
+      </div>
+      <ion-list>
+        <ion-item ng-repeat="dep in skillDependence" ng-click="gotoDependence(dep.id)">
+          {{dep.title}}
+        </ion-item>
+      </ion-list>
+    </div>
+
     <div class="card" ng-if="skill.rankDescriptions && skill.rankDescriptions.length > 0">
       <div class="item item-divider">
         点亮技能
