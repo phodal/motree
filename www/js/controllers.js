@@ -25,11 +25,7 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('HomeCtrl', function ($scope, $state, $cordovaGoogleAnalytics) {
-  if(window.cordova){
-    $cordovaGoogleAnalytics.trackView('HomeCtrl');
-  }
-
+.controller('HomeCtrl', function ($scope, $state) {
   $scope.loadDataFinish = false;
   init();
 
@@ -68,7 +64,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('SkillCtrl', function ($scope, $state, $stateParams, $cordovaGoogleAnalytics) {
+.controller('SkillCtrl', function ($scope, $state, $stateParams) {
   var id = $stateParams.id;
 
   $scope.gotoDependence = function (id) {
@@ -76,10 +72,6 @@ angular.module('starter.controllers', [])
   };
 
   $scope.$on('$ionicView.beforeEnter', function () {
-    if(window.cordova) {
-      $cordovaGoogleAnalytics.trackView('SkillCtrl');
-      $cordovaGoogleAnalytics.trackEvent('Skilltree', 'Skill Name', $scope.skill.title, 100);
-    }
     $scope.skill = _.filter(window.SKILL_TREE, {"id": parseInt(id)})[0];
     $scope.skillDependenceId = $scope.skill.depends;
 

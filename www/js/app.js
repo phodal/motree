@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
 .config(function($ionicConfigProvider) {
   // back button text always displays "Back"
@@ -12,12 +12,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
   $ionicConfigProvider.backButton.text('返回')
 })
 
-.run(function($ionicPlatform, $cordovaGoogleAnalytics) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    if(window.cordova){
-      $cordovaGoogleAnalytics.startTrackerWithId('UA-71907748-5');
-    }
-
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
