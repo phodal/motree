@@ -1,0 +1,23 @@
+{
+  "name": "growth-motree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "service-worker.js",
+  "dependencies": {},
+  "devDependencies": {
+    "sw-precache": "^4.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phodal/growth-motree.git"
+  },
+  "author": "Phodal HUANG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phodal/growth-motree/issues"
+  },
+  "homepage": "https://github.com/phodal/growth-motree#readme"
+}
