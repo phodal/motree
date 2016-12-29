@@ -116,10 +116,6 @@ angular.module('starter.controllers', [])
     return ionic.Platform.isIOS();
   };
 
-  $scope.isDependenceDone = function () {
-    return true;
-  };
-
   $scope.openLink = function (link) {
     if (window.cordova && window.cordova.InAppBrowser) {
       window.open = cordova.InAppBrowser.open;

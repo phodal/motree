@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <div class="card" ng-if="!isDependenceDone()">
+    <div class="card" ng-if="!!skillDependence && skillDependence.length > 0">
       <div class="item item-divider">
         依赖于
       </div>
