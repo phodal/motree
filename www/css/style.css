@@ -68,7 +68,7 @@ svg *::-webkit-selection {
 }
 
 g.has-point.node rect {
-  fill: #2bb8c9 !important;
+  fill: #ffdc00 !important;
   stroke: #387ef5;
 }
 
