@@ -24,23 +24,13 @@
       <div class="item item-divider">
         点亮技能
       </div>
-      <ion-list ng-if="!isIOS()">
+      <ion-list>
         <div ng-if="skill.rankDescriptions && skill.rankDescriptions.length > 0">
           <div ng-repeat="todo in skill.rankDescriptions">
             <ion-checkbox ng-change="addItemToDone()"
                           ng-model="skillStorageInfo['rank-' + $index]['checked']"
                           ng-checked="skillStorageInfo['rank-' + $index]['checked']">{{todo}}</ion-checkbox>
           </div>
-        </div>
-      </ion-list>
-
-      <ion-list ng-if="isIOS()">
-        <div ng-if="skill.rankDescriptions && skill.rankDescriptions.length > 0">
-          <ion-item ng-repeat="todo in skill.rankDescriptions">
-            {{todo}}
-            <ion-option-button class="button-positive" ng-click="addItemToDone(todo)">Done
-            </ion-option-button>
-          </ion-item>
         </div>
       </ion-list>
     </div>
