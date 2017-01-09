@@ -259,7 +259,7 @@ window.SKILL_TREE = [
   },
   {
     "id": 7,
-    "title": "搜索引擎营销(SEM)",
+    "title": "搜索引擎营销",
     "depends": [
       6
     ],

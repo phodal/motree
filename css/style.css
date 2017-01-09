@@ -67,8 +67,8 @@ svg *::-webkit-selection {
   background: transparent;
 }
 
-g.can-add-points.node rect {
-  fill: #2bb8c9 !important;
+g.has-point.node rect {
+  fill: #ffdc00 !important;
   stroke: #387ef5;
 }
 
@@ -96,4 +96,10 @@ g.can-add-points.node rect {
 svg#splash * {
   fill: none;
   stroke: currentColor;
+}
+
+svg,
+div.scroll {
+  height: 100%;
+  width: auto;
 }

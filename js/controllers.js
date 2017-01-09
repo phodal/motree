@@ -67,11 +67,9 @@ angular.module('starter.controllers', [])
 .controller('SkillCtrl', function ($scope, $state, $stateParams) {
   var id = $stateParams.id;
 
-  $scope.gotoDependence = function (id) {
-    $state.go('app.skill', {id: id});
-  };
+  init();
 
-  $scope.$on('$ionicView.beforeEnter', function () {
+  function init () {
     $scope.skill = _.filter(window.SKILL_TREE, {"id": parseInt(id)})[0];
     $scope.skillDependenceId = $scope.skill.depends;
 
@@ -96,7 +94,11 @@ angular.module('starter.controllers', [])
         $scope.skillStorageInfo = {};
       }
     });
-  });
+  }
+
+  $scope.gotoDependence = function (id) {
+    $state.go('app.skill', {id: id});
+  };
 
   $scope.addItemToDone = function () {
     localforage.setItem('skill.' + $scope.skill.id, $scope.skillStorageInfo);

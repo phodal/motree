@@ -1,5 +1,5 @@
-var dataCacheName = 'motree-v1';
-var cacheName = 'motree-cache-v1';
+var dataCacheName = 'motree-v2';
+var cacheName = 'motree-cache-v2';
 var filesToCache = [
   'index.html',
   'lib/ionic/js/ionic.bundle.min.js',
