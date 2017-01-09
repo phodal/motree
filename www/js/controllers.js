@@ -132,4 +132,14 @@ angular.module('starter.controllers', [])
       return false;
     }
   }
+})
+
+.controller('AboutCtrl', function ($scope) {
+  $scope.isIOS = function () {
+    return ionic.Platform.isIOS();
+  };
+
+  $scope.isAndroid = function () {
+    return ionic.Platform.isAndroid();
+  };
 });
