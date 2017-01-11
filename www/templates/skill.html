@@ -18,14 +18,6 @@
           {{dep.title}}
         </ion-item>
       </ion-list>
-      <div class="item item-divider">
-        完成进度
-        <div class="process-bar">
-          <div class="meter">
-            <span ng-style="{ width: process }"></span>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="card" ng-if="skill.rankDescriptions && skill.rankDescriptions.length > 0">
@@ -41,6 +33,14 @@
           </div>
         </div>
       </ion-list>
+      <div class="item item-divider">
+        完成进度
+        <div class="process-bar">
+          <div class="meter">
+            <span ng-style="{ width: process }"></span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="card" ng-if="skill.links">
