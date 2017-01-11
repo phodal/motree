@@ -64,8 +64,9 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('SkillCtrl', function ($scope, $state, $stateParams) {
+.controller('SkillCtrl', function ($scope, $state, $stateParams, $filter) {
   var id = $stateParams.id;
+  $scope.process = '1%';
 
   init();
 
@@ -90,6 +91,7 @@ angular.module('starter.controllers', [])
     localforage.getItem('skill.' + $scope.skill.id, function (err, value) {
       if (value) {
         $scope.skillStorageInfo = value;
+        $scope.updateProcess();
       } else {
         $scope.skillStorageInfo = {};
       }
@@ -115,11 +117,18 @@ angular.module('starter.controllers', [])
         $scope.skillInfo[id] = false;
         localforage.setItem('skill', $scope.skillInfo);
       }
+      $scope.updateProcess();
     });
   };
 
-  $scope.isIOS = function () {
-    return ionic.Platform.isIOS();
+  $scope.updateProcess = function () {
+    var skillDepLength = $scope.skill.rankDescriptions.length;
+    var alreadyDoneNum = _.filter($scope.skillStorageInfo, {"checked": true}).length;
+
+    var finishPercent = alreadyDoneNum / skillDepLength;
+    var result = $filter('number')(finishPercent * 100, 2) + '%';
+
+    $scope.process = result;
   };
 
   $scope.openLink = function (link) {
